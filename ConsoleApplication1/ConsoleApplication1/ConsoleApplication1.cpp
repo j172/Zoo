@@ -148,10 +148,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	ZooClearer(zoo_2);
 	ZooClearer(zoo_3);
 
-	zoo_1.clear();
-	zoo_2.clear();
-	zoo_3.clear();
-
 	_CrtSetReportMode(_CRT_WARN, _CRTDBG_MODE_DEBUG);
 	_CrtDumpMemoryLeaks();
 
