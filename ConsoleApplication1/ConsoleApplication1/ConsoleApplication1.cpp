@@ -120,7 +120,8 @@ void ZooClear(vector<animal*> &zoo){
 	for (auto it = zoo.begin(); it != zoo.end();){
 		// 刪除迭代器指向的物件
 		delete *it;
-		// 從向量中刪除該元素並更新迭代器	
+		// 從向量中刪除該元素並更新迭代器
+		it = zoo.erase(it);	
 	}
 
 	/*for (animal* m_animal : zoo) {
