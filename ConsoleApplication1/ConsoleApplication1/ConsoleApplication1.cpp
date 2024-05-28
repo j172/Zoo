@@ -34,6 +34,14 @@ public:
 class bird :public animal
 {
 public:
+	bird(){
+		/*cout << "bird" << endl;*/
+	}
+
+	~bird(){
+		/*cout << "~bird" << endl;*/
+	}
+
 	void sharking() {
 		cout << "Cheep." << endl;
 	}
@@ -42,6 +50,14 @@ public:
 class dog :public animal
 {
 public:
+	dog(){
+		/*cout << "dog" << endl;*/
+	}
+
+	~dog(){
+		/*cout << "~dog" << endl;*/
+	}
+
 	void sharking() {
 		cout << "Wooh." << endl;
 	}
@@ -50,6 +66,14 @@ public:
 class cat :public animal
 {
 public:
+	cat(){
+		/*cout << "cat" << endl;*/
+	}
+
+	~cat(){
+		/*cout << "~cat" << endl;*/
+	}
+
 	void sharking() {
 		cout << "Meow." << endl;
 	}
@@ -94,10 +118,16 @@ void AnimalAction(string strno, const vector<animal*> &zoo){
 void ZooClear(vector<animal*> &zoo){
 
 	for (auto it = zoo.begin(); it != zoo.end();){
+		delete *it;
 		// Erase the element and update the iterator
 		it = zoo.erase(it);
+
+	
 	}
 
+	/*for (animal* m_animal : zoo) {
+		delete m_animal;
+	}*/
 }
 
 
@@ -118,6 +148,10 @@ int _tmain(int argc, _TCHAR* argv[])
 	ZooClear(zoo_1);
 	ZooClear(zoo_2);
 	ZooClear(zoo_3);
+
+	zoo_1.clear();
+	zoo_2.clear();
+	zoo_3.clear();
 
 	_CrtSetReportMode(_CRT_WARN, _CRTDBG_MODE_DEBUG);
 	_CrtDumpMemoryLeaks();
