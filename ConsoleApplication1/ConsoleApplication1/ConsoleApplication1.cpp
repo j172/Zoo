@@ -118,11 +118,9 @@ void AnimalAction(string strno, const vector<animal*> &zoo){
 void ZooClear(vector<animal*> &zoo){
 
 	for (auto it = zoo.begin(); it != zoo.end();){
+		// 刪除迭代器指向的物件
 		delete *it;
-		// Erase the element and update the iterator
-		it = zoo.erase(it);
-
-	
+		// 從向量中刪除該元素並更新迭代器	
 	}
 
 	/*for (animal* m_animal : zoo) {
