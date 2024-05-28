@@ -115,7 +115,7 @@ void AnimalAction(string strno, const vector<animal*> &zoo){
 	cout << "============================================" << endl;
 }
 
-void ZooClear(vector<animal*> &zoo){
+void ZooClearer(vector<animal*> &zoo){
 
 	for (auto it = zoo.begin(); it != zoo.end();){
 		// 刪除迭代器指向的物件
@@ -144,9 +144,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	AnimalAction("2", zoo_2);
 	AnimalAction("3", zoo_3);
 
-	ZooClear(zoo_1);
-	ZooClear(zoo_2);
-	ZooClear(zoo_3);
+	ZooClearer(zoo_1);
+	ZooClearer(zoo_2);
+	ZooClearer(zoo_3);
 
 	zoo_1.clear();
 	zoo_2.clear();
