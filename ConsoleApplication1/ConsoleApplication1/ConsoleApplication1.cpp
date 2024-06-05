@@ -121,32 +121,34 @@ void ZooClearer(vector<animal*> &zoo){
 		// 刪除迭代器指向的物件
 		delete *it;
 		// 從向量中刪除該元素並更新迭代器
-		it = zoo.erase(it);	
+		it = zoo.erase(it);
 	}
 
 	/*for (animal* m_animal : zoo) {
 		delete m_animal;
-	}*/
+		}*/
 }
 
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	vector<animal*> zoo_1;
-	vector<animal*> zoo_2;
-	vector<animal*> zoo_3;
+	{
+		vector<animal*> zoo_1;
+		vector<animal*> zoo_2;
+		vector<animal*> zoo_3;
 
-	AddAnimal(zoo_1, 5);
-	AddAnimal(zoo_2, 10);
-	AddAnimal(zoo_3, 15);
+		AddAnimal(zoo_1, 5);
+		AddAnimal(zoo_2, 10);
+		AddAnimal(zoo_3, 15);
 
-	AnimalAction("1", zoo_1);
-	AnimalAction("2", zoo_2);
-	AnimalAction("3", zoo_3);
+		AnimalAction("1", zoo_1);
+		AnimalAction("2", zoo_2);
+		AnimalAction("3", zoo_3);
 
-	ZooClearer(zoo_1);
-	ZooClearer(zoo_2);
-	ZooClearer(zoo_3);
+		ZooClearer(zoo_1);
+		ZooClearer(zoo_2);
+		ZooClearer(zoo_3);
+	}
 
 	_CrtSetReportMode(_CRT_WARN, _CRTDBG_MODE_DEBUG);
 	_CrtDumpMemoryLeaks();
